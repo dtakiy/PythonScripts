@@ -5,7 +5,8 @@ import string
 
 print("Creating a Password (Minimum 4 Charachters)")
 lenght = int(input("\n Enter the number of Password Charachters \n"))
-
+while lenght < 4:
+    lenght = int(input("\n Enter the number of Password Charachters \n"))
 if lenght >=4:
     passnum = lenght-4
 
@@ -26,8 +27,7 @@ if lenght >=4:
     tpass = random.sample(allposs, passnum)
     passtotal = minreq + tpass
     password = "".join(passtotal)
+    print("Generated Password: \n")
     print(password)
+    print("\n")
 
-else:
-    print("Error, password should have more than 3 characters")
-    
